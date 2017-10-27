@@ -4,11 +4,24 @@
   "description": "Panda is a REST API for a Students Information Management System. An assessment test for Andela Learning Community 2.0.",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --experimental-modules index.mjs",
+    "linter": "eslint . --ext .mjs --fix --ignore-pattern node_modules/ --ignore-pattern doc/"
   },
   "author": "Chibuotu Amadi (chibuotu@gmail.com)",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.4",
+    "mongoose-restify": "^1.0.3",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.12.1"
   }
 }
