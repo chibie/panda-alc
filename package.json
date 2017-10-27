@@ -1,7 +1,7 @@
 {
   "name": "panda",
   "version": "1.0.0",
-  "description": "Panda is a REST API for a Students Information Management System. An assessment test for Andela Learning Community 2.0.",
+  "description": "Panda is a REST API for a Students Information Management System. My implementation of assessment test for Andela Learning Community 2.0.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
