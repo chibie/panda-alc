@@ -7,6 +7,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import config from './config';
+import router from './app/routes';
 
 /**
   * Initialize app
@@ -38,6 +39,7 @@ app.listen(config.port, config.hostname, () => {
   });
 
   db.once('open', () => {
+    router(app);
     console.log(`Node Version ${process.version}`);
     console.log(`Starting ${config.env} app at ${config.base_url}`);
     console.log(`Quit app with CONTROL-C`);
