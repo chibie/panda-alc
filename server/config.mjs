@@ -6,7 +6,6 @@ let dirs = {
 };
 
 (() => {
-  // Directories to ensure existence of.
   const dirsToCreate = [
     ...Object.values(dirs),
   ];
@@ -15,7 +14,6 @@ let dirs = {
     try {
       fse.ensureDirSync(dir);
     } catch (e) {
-      // We cannot proceed if we can't create important directories. ):
       process.exit(1);
     }
   });
