@@ -11,7 +11,7 @@ const studentSchema = new mongoose.Schema({
   },
   gender: {type: String, enum: GENDERS},
   dateOfBirth: {type: Date, required: true},
-  photoUrl: {type: String, required: true},
+  photoFileName: {type: String, required: true},
   class_: {type: Number, required: true, min: 1, max: 3},
   level: {type: String, enum: LEVELS, required: true},
   subjects: [String],

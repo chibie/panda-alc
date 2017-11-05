@@ -1,0 +1,19 @@
+{
+  "env": {
+      "node": true,
+      "es6": true
+  },
+  "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 8,
+      "ecmaFeatures": {
+          "experimentalObjectRestSpread": true
+      }
+  },
+  "rules": {
+      "indent": ["error", 2],
+      "new-cap": "off",
+      "no-multiple-empty-lines": [1, {"max": 1}]
+  },
+  "extends": "google"
+}

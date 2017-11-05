@@ -1,3 +1,26 @@
+import fse from 'fs-extra';
+import path from 'path';
+
+let dirs = {
+  uploadDirectory: path.resolve(path.resolve(), './uploads'),
+};
+
+(() => {
+  // Directories to ensure existence of.
+  const dirsToCreate = [
+    ...Object.values(dirs),
+  ];
+
+  dirsToCreate.forEach((dir) => {
+    try {
+      fse.ensureDirSync(dir);
+    } catch (e) {
+      // We cannot proceed if we can't create important directories. ):
+      process.exit(1);
+    }
+  });
+})();
+
 export default {
   name: 'Panda',
   env: process.env.NODE_ENV || 'development',
@@ -7,5 +30,6 @@ export default {
   db: {
     uri: process.env.MONGODB_URI || 'mongodb://localhost/alc',
   },
+  ...dirs,
 };
 
